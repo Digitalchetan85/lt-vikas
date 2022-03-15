@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Components/Includes/Footer';
+import VirtualTour from './Components/Includes/VirtualTour';
+import ProjectHighlights from './Components/Includes/ProjectHighlights';
+import Overview from './Components/Includes/Overview';
+import MasterPlan from './Components/Includes/MasterPlan';
+import AboutDevelopers from './Components/Includes/AboutDevelopers';
+import Amenities from './Components/Includes/Amenities';
+import FixedIcons from './Components/Includes/FixedIcons';
+import Location from './Components/Includes/Location';
+import MainSlider from './Components/Includes/MainSlider';
+import Gallery from './Components/Includes/Gallery';
+import Pricing from './Components/Includes/Pricing';
+import HeaderBar from './Components/Includes/HeaderBar';
+import SideForm from './Components/Includes/SideForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HeaderBar />
+      <MainSlider />
+      <ProjectHighlights />
+      <Overview />
+      <MasterPlan />
+      <Pricing />
+      <Gallery />
+      <Amenities />
+      <VirtualTour />
+      <Location />
+      <AboutDevelopers />
+      <FixedIcons />
+      <SideForm />
+      <Footer />
+    </>
   );
 }
 

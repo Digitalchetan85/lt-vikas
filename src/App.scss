@@ -1,0 +1,172 @@
+/* The following block can be included in a custom.scss */
+
+/* make the customizations */
+$theme-colors: (
+  "primary": #201506,
+  "secondary": #fecc0b,
+  "dark": #343a40,
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #f8f9fa,
+);
+
+/* import bootstrap to set changes */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$primary-color: #201506;
+$secondary-color: #fecc0b;
+$white-color: white;
+$black-color: #000;
+$ternary-color: #9d9e9e;
+$dark-color: #001524;
+
+// p {
+//   text-align: justify !important;
+// }
+
+#SRLLightbox {
+  .SRLDownloadButton {
+    display: none !important;
+  }
+}
+
+#navbar {
+  .nav-link {
+    border-right: 1px solid $primary-color;
+    padding: 0px 20px;
+    color: $primary-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    &:hover {
+      color: $secondary-color;
+    }
+    &:last-child {
+      border-right: 0px;
+    }
+  }
+}
+
+
+
+#master-plan {
+  .nav-link {
+    color: $primary-color !important;
+  }
+}
+
+#desktop-fix {
+  z-index: 1;
+  .custom {
+    z-index: 4;
+    left: 1%;
+    bottom: 0%;
+  }
+}
+#mobile-fix {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#gotop {
+  position: fixed;
+  bottom: 0;
+  left:85%;
+  width: 100%;
+  z-index: 1;
+}
+
+#side-contact-form {
+  .stickyForm {
+    position: fixed;
+    top: 25%;
+    width: 310px;
+    right: -310px;
+    text-align: center;
+    padding: 17px;
+    background: #0c0c0ce0;
+    border-radius: 0;
+    transition: 0.35s ease-in-out;
+    z-index: 999;
+    &.active {
+      right: 0;
+    }
+    .btn-hello {
+      background: $primary-color;
+      padding: 10px 32px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: -115px;
+      color: #fff;
+      height: 40px;
+      border-radius: 0;
+      font-size: 15px;
+      cursor: pointer;
+      transform: rotate(-90deg);
+      border: 0;
+      perspective: 100px;
+      outline: 0 !important;
+      &:hover {
+        background-color: white !important;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+      }
+      &::before {
+        background: white !important;
+      }
+    }
+    input[type="text"],
+    input[type="email"],input[type="tel"] {
+      width: 100% !important;
+      border: 0;
+      height: 35px;
+      background: 0 0;
+      border-bottom: 1px solid #ffffff;
+      margin-bottom: 13px;
+      color: #ffffff;
+      border-radius: 0;
+    }
+    &.top_size {
+      top: 0;
+    }
+    [type="submit"] {
+      background: $primary-color !important;
+      border: none;
+      height: 40px !important;
+      padding: 0 30px !important;
+      color: white;
+    }
+  }
+}
+
+#mainSlider {
+  .slide-text {
+    z-index: 1;
+  }
+}
+@include media-breakpoint-only(xs) { 
+  #mainSlider {
+    .slide-text {
+      position: initial !important;
+    }
+    .translate-middle-y {
+      transform: none !important;
+    }
+    .w-25 {
+      width: 100% !important;
+    }
+  }
+  #gotop {
+    position: fixed;
+    bottom: 5%;
+    left:80%;
+    width: 100%;
+    z-index: 1;
+  }
+ }
